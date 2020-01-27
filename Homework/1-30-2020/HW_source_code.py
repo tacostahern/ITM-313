@@ -19,7 +19,11 @@ class_enrollment = int(input("Please enter the prospective class enrollment: "))
 req_rec = input("Is this book required or recommended? ")
 us_un = input("Has the book been used or unused? ")
 
+must_order = class_enrollment
+
 print("So, from the information entered: ")
 print("The book code is", book_code)
 print("The cost of the book is $%.2f" % (book_cost))
 print("The number of volumes is", num_volumes)
+print("Class enrollment is", class_enrollment, "students")
+print("The book is", req_rec, "and it is", us_un)
