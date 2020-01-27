@@ -21,5 +21,5 @@ us_un = input("Has the book been used or unused? ")
 
 print("So, from the information entered: ")
 print("The book code is", book_code)
-print("The cost of the book is $%" % (book_cost))
+print("The cost of the book is $%.2f" % (book_cost))
 print("The number of volumes is", num_volumes)
