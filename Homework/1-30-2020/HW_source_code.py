@@ -19,7 +19,11 @@ class_enrollment = int(input("Please enter the prospective class enrollment: "))
 req_rec = input("Is this book required or recommended? ")
 us_un = input("Has the book been used or unused? ")
 
-must_order = class_enrollment
+if class_enrollment > num_volumes:
+    must_order = class_enrollment - num_volumes
+else:
+    must_order = 0
+
 
 print("So, from the information entered: ")
 print("The book code is", book_code)
