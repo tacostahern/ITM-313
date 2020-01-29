@@ -21,9 +21,11 @@ us_un = input("Has the book been used or unused? ")
 
 if class_enrollment > num_volumes:
     must_order = class_enrollment - num_volumes
+    total_cost = must_order * book_cost
 else:
     must_order = 0
-
+    total_cost = 0
+expected_profit = total_cost * 0.2
 
 print("So, from the information entered: ")
 print("The book code is", book_code)
@@ -31,3 +33,6 @@ print("The cost of the book is $%.2f" % (book_cost))
 print("The number of volumes is", num_volumes)
 print("Class enrollment is", class_enrollment, "students")
 print("The book is", req_rec, "and it is", us_un)
+print("The amount of books that must be order is", must_order)
+print("The total cost of the books is %.2f" % (total_cost))
+print("The expected profit is %.2f" % (expected_profit))
