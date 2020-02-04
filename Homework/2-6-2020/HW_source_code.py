@@ -12,21 +12,29 @@ print("Water\t4,900 fett per second")
 print("Steel\t16,400 feet per second")
 
 choice = input("Please enter 'a' for air, 'w' for water, or 's' for steel: ")
-if (choice.lower() == 'a'):
+if (choice.lower() == "a"):
     speed = 1100
-elif (choice.lower() == 'w'):
+    medium = "air"
+elif (choice.lower() == "w"):
     speed = 4900
+    medium = "water"
 elif(choice.lower() == "s"):
     speed = 16400
+    medium = "steel"
 else:
     print("Wrong choice, buddy")
     print("Automatically selecting air")
     speed = 1100
+    medium = "air"
 
 distance = eval("Please enter the distance the sound wave will travel: ")
 if (distance < 0):
     print("Wrong again")
     print("Automatically choosing 0")
+    distance = 0
 
 time = distance / speed
+
+print("In the medium", medium, "the speed of sound is", speed)
+print("Given the distance", distance  + " feet, the time taken to travel is %.4f" % (time), "seconds")
     
