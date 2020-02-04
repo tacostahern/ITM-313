@@ -27,7 +27,7 @@ else:
     speed = 1100
     medium = "air"
 
-distance = eval("Please enter the distance the sound wave will travel: ")
+distance = eval(input("Please enter the distance the sound wave will travel: "))
 if (distance < 0):
     print("Wrong again")
     print("Automatically choosing 0")
@@ -36,5 +36,5 @@ if (distance < 0):
 time = distance / speed
 
 print("In the medium", medium, "the speed of sound is", speed)
-print("Given the distance", distance  + " feet, the time taken to travel is %.4f" % (time), "seconds")
+print("Given the distance", distance, "feet, the time taken to travel is %.4f" % (time), "seconds")
     
