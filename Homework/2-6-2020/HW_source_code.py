@@ -6,3 +6,27 @@ display the amount of time it will take.
 Author: Tony Acosta Hernandez
 Course: ITM 313
 '''
+print("Medium\tSpeed")
+print("Air\t1,100 feet per second")
+print("Water\t4,900 fett per second")
+print("Steel\t16,400 feet per second")
+
+choice = input("Please enter 'a' for air, 'w' for water, or 's' for steel: ")
+if (choice.lower() == 'a'):
+    speed = 1100
+elif (choice.lower() == 'w'):
+    speed = 4900
+elif(choice.lower() == "s"):
+    speed = 16400
+else:
+    print("Wrong choice, buddy")
+    print("Automatically selecting air")
+    speed = 1100
+
+distance = eval("Please enter the distance the sound wave will travel: ")
+if (distance < 0):
+    print("Wrong again")
+    print("Automatically choosing 0")
+
+time = distance / speed
+    
