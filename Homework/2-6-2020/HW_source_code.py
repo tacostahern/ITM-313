@@ -35,6 +35,6 @@ if (distance < 0):
 
 time = distance / speed
 
-print("In the medium", medium, "the speed of sound is", speed)
+print("In the medium", medium, "the speed of sound is", speed, "feet per second")
 print("Given the distance", distance, "feet, the time taken to travel is %.4f" % (time), "seconds")
     
