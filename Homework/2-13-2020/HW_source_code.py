@@ -12,23 +12,17 @@ first_grade = input("Please enter your letter grade for the first course: ")
 
 if (first_grade.lower() == "a"):
     fgrade_points = 4.0
-    fgrade_weight = 5
 elif (first_grade.lower() == "b"):
     fgrade_points = 3.0
-    fgrade_weight = 4
 elif (first_grade.lower() == "c"):
     fgrade_points = 2.0
-    fgrade_weight = 3
 elif (first_grade.lower() == "d"):
     fgrade_points = 1.0
-    fgrade_weight = 2
 elif (first_grade.lower() == "f"):
     fgrade_points = 0.0
-    fgrade_weight = 1
 else:
     print("Not a valid grade, so you get an F")
     fgrade_points = 0.0
-    fgrade_weight = 1
     
 first_ch = int(input("Please enter the number of credits it is worth: "))
 
@@ -36,26 +30,35 @@ second_grade = input("Please enter your letter grade for the second course: ")
 
 if (second_grade.lower() == "a"):
     sgrade_points = 4.0
-    sgrade_weight = 5
 elif (second_grade.lower() == "b"):
     sgrade_points = 3.0
-    sgrade_weight = 4
 elif (second_grade.lower() == "c"):
     sgrade_points = 2.0
-    sgrade_weight = 3
 elif (second_grade.lower() == "d"):
     sgrade_points = 1.0
-    sgrade_weight = 2
 elif (second_grade.lower() == "f"):
     sgrade_points = 0.0
-    sgrade_weight = 1
 else:
     print("Not a valid grade, so you get an F")
     sgrade_points = 0.0
-    sgrade_weight = 1
     
 second_ch = int(input("Please enter the number of credits it is worth: "))
 
 total_gp = (fgrade_points * first_ch) + (sgrade_points * second_ch)
 gpa = total_gp/(first_ch + second_ch)
-print(gpa)
+
+if (fgrade_points < sgrade_points):
+    print("Here are the grades you entered:", first_grade.capitalize(), "and", second_grade.capitalize())
+    print("Here are the credit hours you entered:", first_ch, "and", second_ch)
+    print("Your calculated GPA: %.2f" % (gpa))
+else:
+    print("Here are the grades you entered:", second_grade.capitalize(), "and", first_grade.capitalize())
+    print("Here are the credit hours you entered:", second_ch, "and", first_ch)
+    print("Your calculated GPA: %.2f" % (gpa))
+
+if (gpa < 2.0):
+    print("Please try harder")
+elif (gpa >= 3.5):
+    print("You are trying hard!")
+
+
