@@ -17,7 +17,10 @@ elif (pounds > 2) and (pounds <= 6):
     charges = pounds * 2.20
 elif (pounds > 6) and (pounds <= 10):
     charges = pounds * 3.7
-else:
+elif (pounds > 10):
     charges = pounds * 3.8
+else:
+    print("How do you have a negative number weight.")
+    charges = 0
 
 print("The total shipping charge is $%.2f" % (charges))
