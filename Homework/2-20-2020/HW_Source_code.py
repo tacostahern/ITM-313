@@ -17,6 +17,13 @@ while (restart.lower() == 'y'):
     print("Type 'I' for I-beam")
     print("Type 'R' for rectangular beam")
     print("Type 'C' for cylindrical beam")
+    beam = input("")
 
+    if (beam.lower() == 'i' or beam.lower() == 'r'):
+        b = eval(input("Please enter the value for 'b' in inches
+    elif (beam.lower() == 'c'):
+        pass
+    else:
+        pass
 
     restart = input("Would you like to try again? <y/n>? ")
