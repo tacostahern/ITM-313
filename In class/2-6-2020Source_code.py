@@ -11,7 +11,7 @@ Course: ITM 313
 
 pounds = eval(input("Please enter the weight of the package in pounds: "))
 
-if (pounds <= 2):
+if (pounds <= 2) & (pounds >= 0):
     charges = pounds * 1.10
 elif (pounds > 2) and (pounds <= 6):
     charges = pounds * 2.20
