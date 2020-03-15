@@ -9,9 +9,14 @@ Course: ITM 313
 
 num = eval(input("Please enter any number: "))
 l = []
+average = 0
 
-while ((num != -99999) and (len(l) < 11)):
+while ((num != -99999)):
     l.append(num)
+    if (len(l) < 10):
+        num = eval(input("Please enter any number: "))
+    else:
+        break
 
 if (len(l) == 0):
     print("Error")
