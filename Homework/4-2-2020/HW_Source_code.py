@@ -7,9 +7,11 @@ Course: ITM 313
 '''
 import os, statistics
 
-sum = 0
-mean = 0
-median = 0
+sum1 = 0
+mean1 = 0
+
+sum2 = 0
+mean2 = 0
 
 f1 = "data1.txt"
 
@@ -20,10 +22,11 @@ if os.path.isfile(f1):
 
     num1 = [ eval(x) for x in s1.split() ]
     for x in num1:
-        sum += x
-    mean = sum/len(num1)
-    print("The sum for data1.txt is", sum)
-    print("The mean is", mean)
+        sum1 += x
+    mean1 = sum1/len(num1)
+    print("The sum for data1.txt is", sum1)
+    print("The mean is", mean1)
+    print("The median is", (statistics.median(num1)))
     
 else:
     print("data1.txt does not exists")
@@ -35,6 +38,13 @@ if os.path.isfile(f2):
 
     s2 = infile.read()
 
+    num2 = [ eval(x) for x in s2.split() ]
+    for x in num2:
+        sum2 += x
+    mean2 = sum2/len(num2)
+    print("The sum for data1.txt is", sum2)
+    print("The mean is", mean2)
+    print("The median is", (statistics.median(num2)))
     
 else:
     print("data2.txt does not exists")
