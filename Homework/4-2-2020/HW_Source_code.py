@@ -27,7 +27,9 @@ if os.path.isfile(f1):
     print("The sum for data1.txt is", sum1)
     print("The mean is", mean1)
     print("The median is", (statistics.median(num1)))
-    
+    print("The smallest value is", min(num1))
+    print("The largest value is", max(num1))
+    print("Total numbers read is", len(num1))
 else:
     print("data1.txt does not exists")
 
@@ -42,9 +44,11 @@ if os.path.isfile(f2):
     for x in num2:
         sum2 += x
     mean2 = sum2/len(num2)
-    print("The sum for data1.txt is", sum2)
+    print("The sum for data2.txt is", sum2)
     print("The mean is", mean2)
     print("The median is", (statistics.median(num2)))
-    
+    print("The smallest value is", min(num2))
+    print("The largest value is", max(num2))
+    print("Total numbers read is", len(num2))
 else:
     print("data2.txt does not exists")
