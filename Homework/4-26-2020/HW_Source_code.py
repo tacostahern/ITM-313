@@ -30,8 +30,8 @@ def main():
     num2 = simpledialog.askstring("Second Number", "Enter another number")
     result = result + "\nThe second number you entered is: " + num2
 
-    summ = int(num1) + int(num2)
-    product = int(num1) * int(num2)
+    summ = float(num1) + float(num2)
+    product = float(num1) * float(num2)
 
     result = result + "\nThe sum of the two numbers is: " + str(summ)
     result = result + "\nThe product of the two numbers is: " + str(product)
