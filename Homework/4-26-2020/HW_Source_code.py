@@ -24,14 +24,14 @@ def main():
     numSemesters = simpledialog.askstring("Number of Semesters", "Enter your number of semesters")
     result = result + "\nThe number of semesters you have had in school is: " + numSemesters
     
-    num1 = simpledialog.askstring("First Number", "Enter a number")
-    result = result + "\nThe first number you entered is: " + num1
+    num1 = simpledialog.askfloat("First Number", "Enter a number")
+    result = result + "\nThe first number you entered is: " + str(num1)
 
-    num2 = simpledialog.askstring("Second Number", "Enter another number")
-    result = result + "\nThe second number you entered is: " + num2
+    num2 = simpledialog.askfloat("Second Number", "Enter another number")
+    result = result + "\nThe second number you entered is: " + str(num2)
 
-    summ = float(num1) + float(num2)
-    product = float(num1) * float(num2)
+    summ = num1 + num2
+    product = num1 * num2
 
     result = result + "\nThe sum of the two numbers is: " + str(summ)
     result = result + "\nThe product of the two numbers is: " + str(product)
