@@ -4,7 +4,7 @@ Author: Tony Acosta Hernandez
 Course ITM 313
 '''
 
-import math
+import math, random
 
 class Circle:
     def __init__(self, radius = 2):
@@ -62,6 +62,7 @@ class Rectangle:
         return "Rectangle has an area of %.2f" % (self.find_area())
 
 def main():
+    '''
     circle = Circle()
     print(circle.display())
 
@@ -70,5 +71,22 @@ def main():
 
     rectangle = Rectangle()
     print(rectangle.display())
+    '''
+
+    shape_list = []
+    for i in range(10):
+        rnd_num = random.randint(1,3)
+
+        if (rnd_num == 1):
+            shape_list.append(Circle())
+        elif(rnd_num == 2):
+            shape_list.append(Square())
+        else:
+            shape_list.append(Rectangle())
+
+    for i in shape_list:
+        print(i.display())
+
+
 
 main()
